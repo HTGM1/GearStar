@@ -1,9 +1,15 @@
-![image](https://github.com/NULLSonic/NULLEngine/blob/main/assets/images/discordRPC/ne_gd4.png)
+[no logo atm]
 ---
-## NULL ENGINE (Godot 4 Engine)
-NULL Engine was originally created with HaxeFlixel build on top the FNF Legacy engine, which uhm sucks ass ngl. Now NE is made with Godot Engine made with the Nova Engine.
+## GearStar ENGINE (Godot 4 Engine)
+GearStar Engine is a Engine that is being built on top of null Engine
+We aim to have GearStar be a capable FnF Engine that can be flexable and modular, maybe not on the level of psych (yet), but still capable to work with without source code
 
-## Customization
-You can customize two things in the Project Settings:
-- Custom Score Text: Enable the ability to edit the score text.
-- Check for Updates: Enabling the ability to check for updates. Disable this for modding.
+
+## Plans
+Our Current plans are to
+- Rewrite some to most of the code of Null and make it more like other engines
+- make our own mods with the engine once it is capable enough to make mods(FanGames) with source wise
+- make the engine as modular to our abilities
+- and many many more!
+
+
