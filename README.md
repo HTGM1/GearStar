@@ -8,11 +8,11 @@ Current Version :
 - Pre-Alpha
 
 Alpha Goals 
-- [X] Alpha 1:
--   [X] Modding Rewrite 
--   [X] Mainmenu Rewrite
--   [X] Freeplay Rewrite : V-Slice Freeplay! 
--   [X] Chart Editor Rewrite 
--   [X] make a 3D Stage Template 
--   [X] Scrap Hud Editor and do a Hud Rewrite 
+- [ ] Alpha 1:
+-   [ ] Modding Rewrite 
+-   [ ] Mainmenu Rewrite
+-   [ ] Freeplay Rewrite : V-Slice Freeplay! 
+-   [ ] Chart Editor Rewrite 
+-   [ ] make a 3D Stage Template 
+-   [ ] Scrap Hud Editor and do a Hud Rewrite 
 -   (more to be added)
