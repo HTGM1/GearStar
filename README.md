@@ -12,4 +12,6 @@ Our Current plans are to
 - make the engine as modular to our abilities
 - and many many more!
 
-
+Main Maintainers:
+HunterTron
+Ava_LavCat
