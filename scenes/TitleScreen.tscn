@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://duhqsh5l5bbtm"]
+[gd_scene load_steps=15 format=3 uid="uid://duhqsh5l5bbtm"]
 
 [ext_resource type="Script" path="res://scenes/TitleScreen.gd" id="1_eg0nr"]
 [ext_resource type="Material" uid="uid://dlwbyy60pp0e2" path="res://assets/shaders/TitleScreenShaderMaterial.tres" id="2_f6nud"]
@@ -8,15 +8,20 @@
 [ext_resource type="SpriteFrames" uid="uid://6vecp03qpxmj" path="res://assets/images/titlescreen/titleEnter.res" id="5_0ol1a"]
 [ext_resource type="PackedScene" uid="uid://bgilym2qsrs4y" path="res://scenes/fonts/Alphabet.tscn" id="6_8oxyx"]
 
-[sub_resource type="Gradient" id="Gradient_c5lki"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_xdgb1"]
-gradient = SubResource("Gradient_c5lki")
-width = 1280
-height = 720
-fill_from = Vector2(0.5, 1)
-fill_to = Vector2(0.5, 0)
+[sub_resource type="Animation" id="Animation_dciba"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("logo:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_hoy8b"]
 resource_name = "entrance"
@@ -24,82 +29,22 @@ length = 1.5
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("gf:position")
+tracks/0/enabled = false
+tracks/0/path = NodePath("logo:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(0, 0.5, 1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(640, 360), Vector2(640, 360), Vector2(880, 400)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("gf:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(0, 2, 1),
-"update": 0,
-"values": [Vector2(1.1, 1.1), Vector2(1.1, 1.1), Vector2(1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("logo:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(0, 0.5, 1),
-"update": 0,
-"values": [Vector2(-850, 640), Vector2(-850, 640), Vector2(356, 256)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("logo:scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(0, 2, 1),
-"update": 0,
-"values": [Vector2(1.25, 1.25), Vector2(1.25, 1.25), Vector2(1, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("titleEnter:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1, 1.5),
-"transitions": PackedFloat32Array(1, -2, 1),
-"update": 0,
-"values": [Vector2(100, 720), Vector2(100, 720), Vector2(100, 612)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("titleEnter:scale")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
+"values": [-0.15708, 0.0, 0.15708, 0.0, -0.15708]
 }
 
 [sub_resource type="Animation" id="Animation_6bwq4"]
 resource_name = "exit"
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath("gf:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -111,7 +56,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("logo:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -123,7 +68,7 @@ tracks/1/keys = {
 }
 tracks/2/type = "value"
 tracks/2/imported = false
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/path = NodePath("titleEnter:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
@@ -135,7 +80,7 @@ tracks/2/keys = {
 }
 tracks/3/type = "value"
 tracks/3/imported = false
-tracks/3/enabled = true
+tracks/3/enabled = false
 tracks/3/path = NodePath("titleEnter:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
@@ -147,7 +92,7 @@ tracks/3/keys = {
 }
 tracks/4/type = "value"
 tracks/4/imported = false
-tracks/4/enabled = true
+tracks/4/enabled = false
 tracks/4/path = NodePath("logo:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
@@ -159,7 +104,7 @@ tracks/4/keys = {
 }
 tracks/5/type = "value"
 tracks/5/imported = false
-tracks/5/enabled = true
+tracks/5/enabled = false
 tracks/5/path = NodePath("logo:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
@@ -171,7 +116,7 @@ tracks/5/keys = {
 }
 tracks/6/type = "value"
 tracks/6/imported = false
-tracks/6/enabled = true
+tracks/6/enabled = false
 tracks/6/path = NodePath("logo:material")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
@@ -184,6 +129,7 @@ tracks/6/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dk36c"]
 _data = {
+"RESET": SubResource("Animation_dciba"),
 "entrance": SubResource("Animation_hoy8b"),
 "exit": SubResource("Animation_6bwq4")
 }
@@ -240,18 +186,6 @@ tracks/3/keys = {
 "update": 1,
 "values": [true, false]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../../BG:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.625),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.219608, 0.254902, 0.733333, 1), Color(0.219608, 0.254902, 0.733333, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_mht0r"]
 resource_name = "danceRight"
@@ -305,18 +239,6 @@ tracks/3/keys = {
 "update": 1,
 "values": [true, false]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../../BG:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.625),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 0.247059, 0.67451, 1), Color(1, 0.247059, 0.67451, 0)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j2p0c"]
 _data = {
@@ -326,11 +248,6 @@ _data = {
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource("1_eg0nr")
-
-[node name="BG" type="Sprite2D" parent="."]
-modulate = Color(0.219608, 0.254902, 0.733333, 1)
-position = Vector2(640, 360)
-texture = SubResource("GradientTexture2D_xdgb1")
 
 [node name="TitleGroup" type="Node2D" parent="."]
 visible = false
@@ -342,8 +259,8 @@ libraries = {
 
 [node name="gf" type="AnimatedSprite2D" parent="TitleGroup"]
 material = ExtResource("2_f6nud")
-position = Vector2(640, 360)
-scale = Vector2(1.1, 1.1)
+position = Vector2(888, 422)
+scale = Vector2(0.791579, 0.791579)
 sprite_frames = ExtResource("2_u0gnt")
 animation = &"gfDance"
 frame = 29
@@ -356,15 +273,15 @@ libraries = {
 }
 
 [node name="logo" type="AnimatedSprite2D" parent="TitleGroup"]
-position = Vector2(-850, 640)
-scale = Vector2(1.25, 1.25)
+position = Vector2(352, 254)
 sprite_frames = ExtResource("4_dmwg3")
 animation = &"logo bumpin"
 script = ExtResource("2_rhavx")
 
 [node name="titleEnter" type="AnimatedSprite2D" parent="TitleGroup"]
 material = ExtResource("2_f6nud")
-position = Vector2(100, 720)
+position = Vector2(161, 581)
+scale = Vector2(0.947916, 0.947916)
 sprite_frames = ExtResource("5_0ol1a")
 animation = &"Press Enter to Begin"
 centered = false

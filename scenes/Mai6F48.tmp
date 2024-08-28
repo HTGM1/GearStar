@@ -74,7 +74,7 @@ length = 0.55
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("StoryMode:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -86,7 +86,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("Freeplay:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -98,7 +98,7 @@ tracks/1/keys = {
 }
 tracks/2/type = "value"
 tracks/2/imported = false
-tracks/2/enabled = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("Options:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
@@ -122,7 +122,7 @@ tracks/3/keys = {
 }
 tracks/4/type = "value"
 tracks/4/imported = false
-tracks/4/enabled = false
+tracks/4/enabled = true
 tracks/4/path = NodePath("StoryMode:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
@@ -134,7 +134,7 @@ tracks/4/keys = {
 }
 tracks/5/type = "value"
 tracks/5/imported = false
-tracks/5/enabled = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("Freeplay:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
@@ -146,7 +146,7 @@ tracks/5/keys = {
 }
 tracks/6/type = "value"
 tracks/6/imported = false
-tracks/6/enabled = false
+tracks/6/enabled = true
 tracks/6/path = NodePath("Options:scale")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
@@ -205,26 +205,26 @@ motion_scale = Vector2(0, 0)
 [node name="Buttons" type="Node2D" parent="PB/UILayer"]
 
 [node name="StoryMode" type="AnimatedSprite2D" parent="PB/UILayer/Buttons"]
-position = Vector2(638.276, 122.937)
-scale = Vector2(0.85783, 0.85783)
+position = Vector2(640, 820)
+scale = Vector2(0.5, 0.5)
 sprite_frames = ExtResource("4_vrrvm")
 animation = &"selected"
 
 [node name="Freeplay" type="AnimatedSprite2D" parent="PB/UILayer/Buttons"]
-position = Vector2(639, 282)
-scale = Vector2(1.03608, 1.03608)
+position = Vector2(640, 820)
+scale = Vector2(0.5, 0.5)
 sprite_frames = ExtResource("5_q251e")
 animation = &"idle"
 
 [node name="Options" type="AnimatedSprite2D" parent="PB/UILayer/Buttons"]
-position = Vector2(641, 439)
-scale = Vector2(1.09821, 1.09821)
+position = Vector2(640, 820)
+scale = Vector2(0.5, 0.5)
 sprite_frames = ExtResource("6_jtmjb")
 animation = &"idle"
 
 [node name="Credits" type="AnimatedSprite2D" parent="PB/UILayer/Buttons"]
-position = Vector2(640.465, 601.375)
-scale = Vector2(1.0746, 1.0746)
+position = Vector2(640, 820)
+scale = Vector2(0.5, 0.5)
 sprite_frames = ExtResource("7_n0of5")
 animation = &"idle"
 
@@ -235,9 +235,9 @@ libraries = {
 }
 
 [node name="Version" type="Label" parent="PB/UILayer"]
-offset_left = 10.0
+offset_left = 3.0
 offset_top = 669.0
-offset_right = 1276.0
+offset_right = 1269.0
 offset_bottom = 714.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 0

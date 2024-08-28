@@ -48,9 +48,6 @@ func _ready() -> void:
 func _process(delta):
 	Conductor.position = Audio.music.time
 
-	if Input.is_action_just_pressed("switch_mod"):
-		add_child(load("res://scenes/ModsMenu.tscn").instantiate())
-
 	if Input.is_action_just_pressed("ui_accept"):
 		if not skipped_intro:
 			skip_intro()
@@ -74,11 +71,8 @@ func _process(delta):
 					Global.switch_scene("res://scenes/MainMenu.tscn")
 			)
 
-	var axis:int = int(Input.get_axis('ui_left', 'ui_right'))
 
-	if axis:
-		color_swap.set_shader_parameter('time', color_swap.get_shader_parameter('time') + \
-				(delta * 0.1) * axis)
+
 
 func beat_hit(beat:int):
 	logo.frame = 0
@@ -90,15 +84,15 @@ func beat_hit(beat:int):
 
 	match beat:
 		1:
-			create_cool_text(['nullsonic'])
+			create_cool_text(['Huntertron - Ava LavCat'])
 		3:
 			add_more_text('presents')
 		4:
 			delete_cool_text()
 		5:
-			create_cool_text(['You should', 'check out'])
+			create_cool_text(['Shout outs', 'to!'])
 		7:
-			add_more_text('the original port')
+			add_more_text('Null Engine')
 		8:
 			delete_cool_text()
 		9:
@@ -112,7 +106,7 @@ func beat_hit(beat:int):
 		14:
 			add_more_text('Funkin')
 		15:
-			add_more_text('NULL Engine')
+			add_more_text('GearStar')
 		_:
 			if beat >= 16:
 				skip_intro()
