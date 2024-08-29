@@ -14,7 +14,7 @@ func _ready():
 	get_tree().paused = false
 	Audio.play_music("freakyMenu")
 	Conductor.change_bpm(Audio.music.stream.bpm)
-	$PB/UILayer/Version.text = "GearStar Engine Pre-Alpha\nNULL Engine v1.0.0\nNova Engine Godot v1.2.0"
+	$PB/UILayer/Version.text = "GearStar Engine Pre-Alpha\nNULL Engine v1.0.1\nNova Engine Godot v1.2.0"
 	RichPresence.set_text("In the menus", "Main Menu")
 
 	$PB/UILayer/entrance.play('entrance')
